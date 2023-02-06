@@ -1,0 +1,49 @@
+@import normalize
+@import fonts
+@import variables
+
+body
+    background-color: $background
+    color: $text
+    margin: 1em
+    font-family: 'Times New Roman', Times, serif
+
+a
+    color: $unvisited
+
+a:visited
+    color: $visited
+
+nav
+    text-align: right
+
+.content
+    max-width: 743px
+    margin: 0 auto
+
+.gallery
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    grid-gap: 1rem
+    gap: 1rem
+
+    a
+        overflow: hidden
+        border-radius: 0.5em
+
+    img
+        height: 100%
+        margin-bottom: 1em
+        transition-duration: 150ms
+    img:hover
+        transform: scale(1.1) rotate(2.5deg)
+
+h1, h2
+    font-weight: 900
+
+h1, h2, p
+    text-align: center
+
+footer
+    margin-top: 2em
+    text-align: center

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>
+    {{ section.title }}
+</h1>
+
+{{ section.content | safe }}
+
+<div class="gallery">
+    {% for asset in section.assets -%}
+    {% set image = resize_image(path=asset, width=220, height=150) %}
+    <a href="{{ get_url(path=asset) }}" target="_blank">
+        <img src="{{ image.url }}" />
+    </a>
+    {%- endfor %}
+</div>
+
+<footer class="footer">
+    Copyright © 2022 Light Ediand
+</footer>
+
+{% endblock content %}
